@@ -1,257 +1,290 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to My Homepage!!!</title>
-    <style>
-      body {
-        background-color: #000080;
-        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffff00' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        font-family: "Times New Roman", Times, serif;
-        color: #00ff00;
-        margin: 0;
-        padding: 20px;
-      }
+<!DOCTYPE html>
+<html>
 
-      .container {
-        max-width: 800px;
-        margin: 0 auto;
-        background-color: #000033;
-        border: 5px ridge #c0c0c0;
-        padding: 20px;
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Syarif Abdurrahman</title>
+  <style>
+    body {
+      color: black;
+      background-color: white;
+      font-family: verdana, helvetica, arial, sans-serif;
+      font-size: 84%;
+      margin: 0;
+      padding: 0;
+    }
 
-      h1 {
-        text-align: center;
-        color: #ff00ff;
-        font-size: 36px;
-        text-shadow: 2px 2px #ffff00;
-        animation: blink 1s step-end infinite;
-      }
+    /* # Header # */
+    .superHeader {
+      color: black;
+      background-color: white;
+      height: 1.6em;
+    }
 
-      @keyframes blink {
-        50% {
-          opacity: 1;
-        }
-        51% {
-          opacity: 0.5;
-        }
-        52% {
-          opacity: 1;
-        }
-      }
+    .superHeader img {
+      vertical-align: bottom;
+    }
 
-      .marquee-container {
-        background-color: #ff0000;
-        color: #ffff00;
-        padding: 5px;
-        border: 3px inset #808080;
-        overflow: hidden;
-      }
+    .superHeader a {
+      color: blue;
+      background-color: transparent;
+      text-decoration: none;
+      font-size: 91%;
+      margin: 0;
+      padding: 0 0.5ex 0 0.25ex;
+    }
 
-      .marquee-text {
-        display: inline-block;
-        white-space: nowrap;
-        animation: marquee 10s linear infinite;
-      }
+    .superHeader a:hover {
+      text-decoration: none;
+      color: purple;
+      background-color: white;
+    }
 
-      @keyframes marquee {
-        0% {
-          transform: translateX(100%);
-        }
-        100% {
-          transform: translateX(-100%);
-        }
-      }
+    .superHeader div {
+      position: absolute;
+      top: 0.40ex;
+    }
 
-      .intro-section {
-        background-color: #000066;
-        border: 3px double #00ffff;
-        padding: 15px;
-        margin: 20px 0;
-        text-align: center;
-      }
+    .superHeader .left {
+      left: 0.4em;
+    }
 
-      .intro-section h2 {
-        color: #ffff00;
-        text-decoration: underline;
-      }
+    .superHeader .right {
+      right: 0.4em;
+    }
 
-      .intro-section p {
-        font-size: 14px;
-        line-height: 1.8;
-        color: #ffffff;
-      }
+    .midHeader {
+      color: black;
+      background-color: white;
+      border: solid 0 white;
+      border-width: 1px 0 0;
+    }
 
-      .visitor-counter {
-        text-align: center;
-        margin: 20px 0;
-        padding: 10px;
-        background-color: #330000;
-        border: 2px groove #ff0000;
-      }
+    .headerTitle {
+      color: black;
+      font-family: klavika, verdana, helvetica, arial, sans-serif;
+      font-size: 233%;
+      font-weight: normal;
+      margin: 0 0 0 4mm;
+      padding: 0.25ex 0;
+    }
 
-      .visitor-counter span {
-        font-family: "Courier New", monospace;
-        color: #00ff00;
-        font-size: 20px;
-        background-color: #000000;
-        padding: 5px 15px;
-        border: 2px inset #808080;
-      }
+    #headerSubTitle {
+      font-size: 50%;
+      font-style: italic;
+      margin-left: 1em;
+    }
 
-      .links-section {
-        text-align: center;
-        margin: 20px 0;
-      }
+    .headerTitle a {
+      color: blue;
+      text-decoration: none;
+    }
 
-      .links-section a {
-        color: #00ffff;
-        font-size: 16px;
-        margin: 0 10px;
-        text-decoration: underline;
-      }
+    .headerTitle a:hover {
+      color: purple;
+      background-color: white;
+      text-decoration: none;
+    }
 
-      .links-section a:hover {
-        color: #ff00ff;
-        background-color: #ffff00;
-      }
+    .subHeader {
+      display: none;
+      color: black;
+      background-color: white;
+      margin: 0;
+      padding: 1ex 1ex 1ex 1.5mm;
+    }
 
-      .guestbook {
-        text-align: center;
-        margin: 20px 0;
-        padding: 15px;
-        background-color: #003300;
-        border: 3px outset #00ff00;
-      }
+    .subHeader a {
+      color: blue;
+      background-color: transparent;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0;
+      padding: 0 0.75ex 0 0.5ex;
+    }
 
-      .guestbook a {
-        color: #00ff00;
-        font-weight: bold;
-        font-size: 18px;
-      }
+    .subHeader a:hover {
+      color: purple;
+      background-color: white;
+      text-decoration: none;
+    }
 
-      hr {
-        border: none;
-        height: 3px;
-        background: linear-gradient(
-          to right,
-          #ff0000,
-          #ffff00,
-          #00ff00,
-          #00ffff,
-          #0000ff,
-          #ff00ff
-        );
-        margin: 20px 0;
-      }
+    /* # Side # */
+    #side-bar {
+      width: 16em;
+      float: left;
+      clear: left;
+      border-right: 1px solid white;
+    }
 
-      .under-construction {
-        text-align: center;
-        color: #ff6600;
-        font-size: 12px;
-        font-style: italic;
-      }
+    #side-bar div {
+      border-bottom: 1px solid white;
+    }
 
-      .email-link {
-        text-align: center;
-        margin: 15px 0;
-      }
+    .sideBarTitle {
+      color: black;
+      font-weight: bold;
+      margin: 0 0 0.5em 2mm;
+      padding: 1em 0 0 0;
+    }
 
-      .email-link a {
-        color: #ffff00;
-      }
+    #side-bar ul {
+      list-style-type: none;
+      list-style-position: outside;
+      margin: 0;
+      padding: 0 0 0.3em 0;
+    }
 
-      .updated-date {
-        text-align: center;
-        font-size: 12px;
-        color: #808080;
-      }
+    li ul {
+      padding-left: 1.0em !important;
+    }
 
-      .best-viewed {
-        text-align: center;
-        font-size: 11px;
-        color: #00ff00;
-        margin-top: 10px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="marquee-container">
-        <span class="marquee-text"
-          >★★★ WELCOME TO MY HOMEPAGE!!! ★★★ LAST UPDATED: February 2026 ★★★
-          ENJOY YOUR STAY!!! ★★★</span
-        >
+    #side-bar li {
+      margin: 0;
+      padding: 0.1ex 0;
+    }
+
+    #side-bar a {
+      color: blue;
+      background-color: transparent;
+      text-decoration: none;
+      text-transform: none;
+      margin: 0;
+      padding: 0.35em 1ex 0.35em 2mm;
+      display: block;
+      font-weight: bold !important;
+      font-size: 104%;
+      border-left: black solid 0.2em;
+    }
+
+    #side-bar a:hover {
+      color: purple;
+      background-color: white;
+      border-left: black solid 0.2em;
+      text-decoration: none;
+    }
+
+    /* # Main Copy # */
+    #main-copy {
+      max-width: 70em;
+      color: black;
+      background-color: transparent;
+      text-align: justify;
+      line-height: 1.5em;
+      margin: 0em 0 0 16em;
+      padding: 0.5mm 5mm 5mm 5mm;
+      border-left: 1px solid white;
+    }
+
+    #main-copy p {
+      margin: 1em 1ex 1em 1ex !important;
+      padding: 0;
+    }
+
+    #main-copy a {
+      color: black;
+      background-color: transparent;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    #main-copy a:hover {
+      text-decoration: none;
+      color: purple;
+      background-color: white;
+    }
+
+    #main-copy h1,
+    #main-copy h2 {
+      color: black;
+      background-color: transparent;
+      font-size: 145.5%;
+      font-weight: bold;
+      margin: 2em 0 0 0;
+      padding: 0.5ex 0 0.5ex 0.6ex;
+      border-bottom: 2px solid black;
+    }
+
+    /* # Footer # */
+    #footer {
+      color: black;
+      background: white;
+      font-size: 91%;
+      margin: 0;
+      padding: 1em 2.5mm .15em 2.5mm;
+      clear: both;
+      border: solid 0 white;
+      border-width: 1px 0 1px 0;
+    }
+
+    #footer .right {
+      text-align: right;
+      line-height: 1.45em;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header">
+    <div class="superHeader">
+      <div class="left">
+        <a href="/">home</a> |
+        <a href="mailto:syarifabdr22@gmail.com">email</a>
       </div>
-
-      <h1>~*~ WelCoMe To My HoMePaGe!!! ~*~</h1>
-
-      <div class="intro-section">
-        <h2>~ Introduction ~</h2>
-        <p>
-          <b>Hello there, fellow net surfer!!!</b><br /><br />
-          Welcome to my corner of the World Wide Web! My name is
-          <font color="#00ffff">Syarif</font> and I'm so excited to have you
-          visit my personal homepage!<br /><br />
-          This website is dedicated to sharing my thoughts, projects, and
-          interests with the world. Feel free to look around and explore what
-          I've created. Don't forget to sign my guestbook before you leave!!!<br /><br />
-          <i
-            >"The internet is a vast place, and you've found your way here.
-            That's pretty cool!"</i
-          >
-        </p>
+      <div class="right">
       </div>
-
-      <div class="visitor-counter">
-        <p>You are visitor number:</p>
-        <span>000482</span>
-      </div>
-
-      <hr />
-
-      <!-- <div class="links-section">
-            <b>~ Quick Links ~</b><br><br>
-            <a href="hello.html">[ Hello World ]</a>
-            <a href="#">[ About Me ]</a>
-            <a href="#">[ My Projects ]</a>
-            <a href="#">[ Cool Links ]</a>
-        </div> -->
-
-      <div class="links-section">
-        <b>~ My Apps & Privacy Policies ~</b><br /><br />
-        <a href="Quran-jar-privacy.html"> [ Quran Jar - Privacy Policy ]</a>
-        <a href="Calculator-app-privacy.html"
-          >[ Plain Calc - Privacy Policy ]</a
-        >
-        <a href="Password-manager-app-privacy.html"
-          >[ MaVault Password Manager - Privacy Policy ]</a
-        >
-      </div>
-
-      <!-- <div class="guestbook">
-        <a href="#">✉ SIGN MY GUESTBOOK!!! ✉</a><br /><br />
-        <a href="#">📖 VIEW GUESTBOOK 📖</a>
-      </div> -->
-
-      <hr />
-
-      <div class="email-link">
-        <a href="syarifabdr22@gmail.com">📧 Email Me!</a>
-      </div>
-
-      <p class="under-construction">
-        🚧 More pages coming soon! Check back often! 🚧
-      </p>
-
-      <p class="updated-date">Page last updated: February 24, 2026</p>
-
-      <p class="best-viewed">
-        Best viewed with Internet Explorer 4.0 or Netscape Navigator<br />
-        800x600 resolution
-      </p>
     </div>
-  </body>
+    <div class="midHeader">
+      <h1 class="headerTitle">
+        <a href="/">SYARIF ABDURRAHMAN
+          <span id="headerSubTitle">HOMEPAGE</span>
+        </a>
+      </h1>
+    </div>
+    <div class="subHeader"><br></div>
+  </div>
+
+  <div id="side-bar">
+    <div>
+      <p class="sideBarTitle">Apps & Privacy:</p>
+      <ul>
+        <li><a href="Quran-jar-privacy.html">&rsaquo; quran jar</a></li>
+        <li><a href="Calculator-app-privacy.html">&rsaquo; plain calc</a></li>
+        <li><a href="Password-manager-app-privacy.html">&rsaquo; mavault</a></li>
+        <li><a href="Quick-Wifi-Share.html">&rsaquo; Quick Wifi Share</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="sideBarTitle">Contact:</p>
+      <ul>
+        <li><a href="mailto:syarifabdr22@gmail.com">&rsaquo; email me!</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="main-copy">
+    <h1 id="introduction">introduction</h1>
+    <p><b>hello there, fellow net surfer!!!</b></br>
+      welcome to my corner of the world wide web! my name is syarif and i'm so excited to have you visit my personal
+      homepage!</br>
+      this website is dedicated to sharing my thoughts, projects, and interests with the world. feel free to look around
+      and explore what i've created.</br>
+      <i>"the internet is a vast place, and you've found your way here. that's pretty cool!"</i>
+    </p>
+
+    <h1 id="stats">stats</h1>
+    <p>you are visitor number: 000482</p>
+
+    <h1 id="updates">updates</h1>
+    <p>more pages coming soon! check back often!</br>
+      page last updated: february 24, 2026</p>
+  </div>
+
+  <div id="footer">
+    <br>
+    <div class="right">best viewed with internet explorer 4.0 or netscape navigator</div>
+  </div>
+</body>
+
 </html>
